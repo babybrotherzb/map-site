@@ -1,0 +1,33 @@
+@import "../../static/less/variables.less";
+
+.search_content {
+  display: none;
+  width: calc(100vw - 28px - 28px);
+  max-height: 80vh;
+  left: -1px;
+  position: absolute;
+  background: #fff;
+  z-index: 9;
+  overflow-y: auto;
+  top: 98px;
+  border-radius: 16px;
+  border: 1px solid #dde2f5;
+  box-shadow: 0 2px 10px 0 rgba(206, 214, 245, 0.3);
+  &-box {
+    padding: 15px 30px;
+    border-bottom: 1px solid @splitterColor;
+    .name {
+      font-size: 28px;
+      font-weight: bold;
+      color: #666;
+    }
+    .district {
+      font-size: 24px;
+      color: #999;
+    }
+  }
+}
+.search_content_radius {
+  border-radius: 0 0 16px 16px;
+  border-top: none;
+}

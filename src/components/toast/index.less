@@ -1,0 +1,43 @@
+#toast-wrapper {
+  font-size: 30px;
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  padding: 21px 42px;
+  max-width: 450px;
+  min-height: 225px;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  color: #fff;
+  background-color: rgba(14, 37, 77, 0.85);
+  border-radius: 33.33px;
+  line-height: 2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+
+  &.hide {
+    transition: all 0.2s;
+    transform: translate(-50%, -100%);
+    width: 1.6rem;
+    opacity: 0;
+  }
+
+  .icon-wrapper {
+    margin: 24px;
+    display: flex;
+    justify-content: center;
+  }
+
+  pre {
+    max-width: 100%;
+    font-size: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+}

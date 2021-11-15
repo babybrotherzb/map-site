@@ -1,0 +1,66 @@
+@import "../../static/less/variables.less";
+
+.page-home {
+  margin: 0 auto;
+  overflow: hidden;
+  font-size: 48px;
+
+  .my_map {
+    width: 100vw;
+    height: 60vh;
+    position: relative;
+    top: 0px;
+    top: constant(safe-area-inset-top);
+    top: env(safe-area-inset-top);
+    z-index: 0;
+    background: rgb(244, 244, 244);
+    #position {
+      width: 100%;
+      height: 61vh;
+      .amap-logo {
+        display: none !important;
+      }
+      .amap-copyright {
+        display: none !important;
+      }
+      .amap-icon {
+        img {
+          width: 50px;
+        }
+      }
+    }
+    .add_self {
+      position: absolute;
+      font-size: 28px;
+      font-weight: bold;
+      bottom: 20px;
+      right: 27px;
+      z-index: 5;
+      border-radius: 20px;
+      height: 72px;
+      padding: 0 20px;
+      background: #fff;
+      color: @themeColor;
+      display: flex;
+      border: 2px solid #dde2f5;
+      align-items: center;
+      &-icon {
+        width: 40px;
+        margin-right: 15px;
+      }
+    }
+  }
+
+  .toBottom {
+    animation: toBottomFrame 0.5s forwards;
+  }
+
+  @keyframes toBottomFrame {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+}
