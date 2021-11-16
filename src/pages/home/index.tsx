@@ -1,7 +1,7 @@
 /*
  * @Author: baby张
  * @Date: 2021-11-15 15:50:06
- * @LastEditTime: 2021-11-15 17:07:46
+ * @LastEditTime: 2021-11-16 10:08:46
  * @LastEditors: Please set LastEditors
  * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  * @FilePath: /map-site/src/page/home/index.tsx
@@ -11,7 +11,6 @@ import React, { useEffect, useState, useRef, useCallback } from "react";
 import { Search, SearchContent, BottomSearch, Toast } from "src/components";
 import { AllIcon } from "src/utils/constant";
 import { getQuery } from "src/utils/utils";
-import { record } from "src/utils/utils";
 import API from "src/utils/api";
 import "./index.less";
 
@@ -162,7 +161,6 @@ const PageHome: React.FC<PageHomeProps> = props => {
     setShowSearchCont(false);
     setAroundChoose(false);
     setFristSearch(false);
-    record("/goldlogxiniao.xnapp.xn_map_drag", `serverKey=${serverKey}`);
     // 自定义上报
   };
 
@@ -198,7 +196,6 @@ const PageHome: React.FC<PageHomeProps> = props => {
   // 顶部输入框搜索
   const handleOnSubmit = (e: any) => {
     e.stopPropagation();
-    record("/goldlogxiniao.xnapp.xn_map_topSearch", `serverKey=${serverKey}`);
     getList(inputval);
   };
 
@@ -221,7 +218,6 @@ const PageHome: React.FC<PageHomeProps> = props => {
     let loca = item.location;
     if (type) {
       // true 底部周边
-      record("/goldlogxiniao.xnapp.xn_map_around", `serverKey=${serverKey}`);
     } else {
       setFristSearch(true);
       setInputval(item.name);
@@ -455,10 +451,6 @@ const PageHome: React.FC<PageHomeProps> = props => {
           className="add_self"
           onClick={() => {
             console.log(selfCenter, gdCenter, "点击回到我定位-selfCenter");
-            record(
-              "/goldlogxiniao.xnapp.xn_map_self",
-              `serverKey=${serverKey}`
-            );
             setFristSearch(false);
             if (selfCenter.length) {
               map?.setCenter(selfCenter);

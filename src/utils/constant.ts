@@ -1,12 +1,11 @@
 /*
- * @Author: 宝二
- * @Date: 2021-08-23 19:31:42
- * @LastEditTime: 2021-09-15 15:37:03
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: /xn-map/src/utils/constant.ts
+ * @Author: baby张
+ * @Date: 2021-11-15 19:07:43
+ * @LastEditTime: 2021-11-16 10:12:44
+ * @LastEditors: your name
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: /map-site/src/utils/constant.ts
  */
-
 const host = window.location.host;
 
 const mapEnv = /^page.cainiao.com/.test(host)
