@@ -40,7 +40,7 @@ if (!checkRequiredFiles([paths.appHtml, paths.appIndexJs])) {
 }
 
 // 像Cloud9这样的工具就依赖于此。
-const DEFAULT_PORT = parseInt(process.env.PORT, 10) || 3000;
+const DEFAULT_PORT = 3288;
 const HOST = process.env.HOST || "0.0.0.0";
 
 if (process.env.HOST) {

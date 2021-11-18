@@ -1,18 +1,13 @@
 /*
  * @Author: baby张
  * @Date: 2021-11-15 19:07:43
- * @LastEditTime: 2021-11-16 10:12:44
- * @LastEditors: your name
+ * @LastEditTime: 2021-11-18 14:17:09
+ * @LastEditors: Please set LastEditors
  * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  * @FilePath: /map-site/src/utils/constant.ts
  */
-const host = window.location.host;
 
-const mapEnv = /^page.cainiao.com/.test(host)
-  ? "//page.cainiao.com/xiniao-web/xn-map/index.html/"
-  : /^page-pre.cainiao.com/.test(host)
-  ? "//page-pre.cainiao.com/xiniao-web/xn-map/index.html/"
-  : "//30.117.81.12:49425/";
+const mapEnv = "//30.117.32.104:3288/";
 
 const AllIcon: {
   markerIcon: string;
